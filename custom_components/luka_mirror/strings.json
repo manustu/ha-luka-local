@@ -1,0 +1,24 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect your Luka mirror",
+        "description": "Enter the mirror's IP address or hostname. Home Assistant must be able to reach it on your local network.",
+        "data": {"host": "IP address or hostname"}
+      },
+      "reconfigure": {
+        "title": "Change mirror address",
+        "description": "Enter the new address of the same mirror. To add a different mirror, create a separate integration entry.",
+        "data": {"host": "IP address or hostname"}
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not read the mirror's light state. Check its address and local network connection.",
+      "invalid_host": "Enter an IP address or hostname without a URL scheme or path."
+    },
+    "abort": {
+      "already_configured": "This address is already configured.",
+      "reconfigure_successful": "Mirror address updated."
+    }
+  }
+}
