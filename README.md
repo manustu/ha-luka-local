@@ -30,7 +30,7 @@ with other Luka models, cabinets and firmware versions has not been verified.
 2. On Unraid, use the host folder mapped to the HA container's `/config` path.
    Do not copy into the container's temporary filesystem.
 3. Restart Home Assistant.
-4. Open **Settings â†’ Devices & services â†’ Add integration â†’ Luka Mirror**.
+4. Open **Settings > Devices & services > Add integration > Luka Mirror**.
 5. Enter your mirror's IP address or hostname.
 
 The proposed minimum HA version is 2025.1; this must be verified before release.
@@ -42,7 +42,7 @@ integration's Reconfigure action. This preserves the existing entity IDs. Withou
 a verified hardware identifier, duplicate prevention uses the entered address;
 do not add the same mirror again using a different hostname or alias.
 
-## HACS installation (after publication)
+## HACS custom repository installation
 
 Add `https://github.com/manustu/ha-luka-local` as a custom repository of category
 **Integration**, download Luka Mirror, restart HA and follow UI setup above.
