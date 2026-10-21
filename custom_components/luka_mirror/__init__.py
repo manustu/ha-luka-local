@@ -5,7 +5,7 @@ from .const import DOMAIN
 from .coordinator import LukaCoordinator
 from .protocol import LukaClient
 
-PLATFORMS = [Platform.LIGHT, Platform.SELECT]
+PLATFORMS = [Platform.LIGHT, Platform.NUMBER, Platform.SELECT]
 
 
 async def async_setup_entry(hass, entry):

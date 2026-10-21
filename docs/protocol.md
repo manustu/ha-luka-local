@@ -37,8 +37,10 @@ Status returns three separate frames with `light_power`, `percentage` and
 `colorTemperature`. Setters echo the updated field. The client waits for each
 echo and obtains a complete status after a control transaction.
 
-Observed white codes: 2200, 2700, 5500, 7000. These are exposed as Warmest, Warm,
-Cool and Coolest rather than claimed physical Kelvin temperatures. No continuous
+Observed white codes: 2200, 2700, 5500, 7000. Physical user testing found the
+warm/cool order is opposite to Kelvin ordering. Since 0.1.1 the labels map as
+Warmest=7000, Warm=5500, Cool=2700, Coolest=2200. These are device codes rather
+than claimed physical Kelvin temperatures. No continuous
 temperature support is claimed. Brightness 25%, 45%, 85% and all four white codes
 were acknowledged; the user confirmed physical changes. Other brightness values
 occurred in the app capture; exact endpoint behaviour still needs HA testing.

@@ -80,6 +80,12 @@ class ProtocolTests(unittest.IsolatedAsyncioTestCase):
         for value in p.PRESETS.values():
             self.assertEqual((await self.client.set_state(temperature=value)).temperature, value)
 
+    async def test_white_labels_follow_observed_device_order(self):
+        for name, code in (("Warmest", 7000), ("Warm", 5500),
+                           ("Cool", 2700), ("Coolest", 2200)):
+            state = await self.client.set_state(temperature=p.PRESETS[name])
+            self.assertEqual(state.temperature, code)
+
     async def test_validate_before_mutation(self):
         for value in (-1, 101, True, 1.5):
             with self.assertRaises(ValueError):

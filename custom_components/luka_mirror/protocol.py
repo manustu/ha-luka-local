@@ -11,7 +11,8 @@ from dataclasses import dataclass
 
 MAGIC = bytes.fromhex("18961820")
 PORT = 8899
-PRESETS = {"Warmest": 2200, "Warm": 2700, "Cool": 5500, "Coolest": 7000}
+# Device codes run opposite to Kelvin ordering, confirmed on the physical mirror.
+PRESETS = {"Warmest": 7000, "Warm": 5500, "Cool": 2700, "Coolest": 2200}
 FIELDS = {"light_power", "percentage", "colorTemperature"}
 
 

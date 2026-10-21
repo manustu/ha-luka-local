@@ -10,6 +10,8 @@ not yet listed in the HACS default catalog and has no affiliation with Luka, Sen
 ## Features
 
 - Main light: on/off and brightness.
+- Separate Brightness slider (1-100%) in the device controls. Adjusting it turns
+  the main light on. Use the main light toggle to turn it off.
 - White preset selector: Warmest, Warm, Cool and Coolest.
 - State polling every 10 seconds, including changes made using the app or buttons.
 - Unavailable state on connection failures and automatic retry on the next poll.
